@@ -11,6 +11,41 @@
   --input-background: rgb(233, 233, 233);
 }
 
+footer {
+  padding: 72px;
+  border-top: 3px solid var(--input-background);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-areas:
+    "one-a one-b one-c"
+    "two-a two-b two-c";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 36px 0;
+}
+
+.one-a {
+  grid-area: one-a;
+}
+
+.one-b {
+  grid-area: one-b;
+}
+.one-c {
+  grid-area: one-c;
+}
+.two-a {
+  grid-area: two-a;
+}
+.two-b {
+  grid-area: two-b;
+}
+.two-c {
+  grid-area: two-c;
+}
+
 .footer-title {
   font-size: 3rem;
   font-weight: 500;
@@ -164,6 +199,21 @@
 }
 
 @media screen and (max-width: 1000px) {
+  footer {
+    padding: 42px;
+  }
+
+  .footer-grid {
+    grid-template-areas:
+      "one-c"
+      "one-a"
+      "one-b"
+      "two-a"
+      "two-b"
+      "two-c";
+    grid-template-columns: 1fr;
+  }
+
   .bottom-nav ul {
     flex-direction: column;
     align-items: flex-start;
