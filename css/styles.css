@@ -45,6 +45,44 @@ main > section {
   color: blue;
 }
 
+.responsive-square {
+  width: 100%;
+  max-width: 800px;
+  background: rgb(233, 199, 247);
+  position: relative;
+}
+
+.responsive-square::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#office-collab {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  right: 700px;
+}
+
+#office-collab > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#meeting {
+  width: 100%;
+  max-width: 750px;
+  position: absolute;
+  top: 210px;
+  left: 475px;
+}
+
+#meeting > img {
+  width: 100%;
+  object-fit: cover;
+}
+
 footer {
   padding: 72px;
   border-top: 3px solid var(--input-background);
